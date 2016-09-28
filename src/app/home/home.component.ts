@@ -11,12 +11,11 @@ import {HttpService} from '../httpService';
 
 })
 export class HomeComponent implements OnInit {
-  private userList: any;
+  
+  // variable declaration
+  private salaryList: any;
   private toasterService: ToasterService;
   
-
-
-
   constructor(toasterService: ToasterService,private _httpservice: HttpService) {
     this.toasterService = toasterService;
 
@@ -29,18 +28,16 @@ export class HomeComponent implements OnInit {
 
   getSalaryDetails() {
     this._httpservice.getSalary().subscribe(
-      data => this.userList = JSON.stringify(data),
+      data => this.salaryList = data.results,
       error => alert(error),
       () => console.log("Finish")
     );
 
   }
 
-  removeUser(user) {
-    this.userList.splice(this.userList.indexOf(user), 1);
+  removeUser(salary) {
+    this.salaryList.splice(this.salaryList.indexOf(salary), 1);
     this.toasterService.pop('success', 'User deleted Successfully!!!!', 'User deleted Successfully!!!!!!');
-    console.log("" + user);
-
   }
 
 
