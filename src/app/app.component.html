@@ -1,0 +1,158 @@
+<div id="wrapper">
+    <header></header>
+
+    <!-- Sidebar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+        <ul class="nav sidebar-nav">
+            <li class="sidebar-brand">
+                <a class="navbar-brand" href="#"><span><img src="../assets/logo.png" height="50px"></span> Crew Link</a>
+            </li>
+            <li>
+                <a [routerLink]="['/']"><i class="fa fa-dashboard fa-fw fa-1x"></i> Dashboard</a>
+            </li>
+            <li>
+                <a [routerLink]="['/home']"><i class="fa fa-fw fa-home"></i> Home</a>
+            </li>
+            <li>
+                <a [routerLink]="['/about']"><i class="fa fa-fw fa-folder"></i>About</a>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-fw fa-file-o"></i>Users</a>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-fw fa-file-o"></i>CrewType</a>
+            </li>
+
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-train fa-fw" aria-hidden="true"></i> Trains <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#"><i class="fa fa-adjust fa-fw" aria-hidden="true"></i>List all Trains</a></li>
+                    <li><a href="#"><i class="fa fa-adjust fa-fw" aria-hidden="true"></i>Train Type</a></li>
+
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-plus"></i> Stations <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">List all Stations</a></li>
+                    <li><a href="#">Divisions</a></li>
+
+                </ul>
+            </li>
+
+
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-plus"></i> DrivingSection <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">List all DrivingSections</a></li>
+                    <li><a href="#">Create DrivingSection</a></li>
+
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-plus"></i> DrivingDuty <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">List all DrivingDuty</a></li>
+                    <li><a href="#">Create DrivingDuty</a></li>
+
+                </ul>
+            </li>
+
+
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-plus"></i> RoundTrip <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">List All RoundTrip </a></li>
+                    <li><a href="#">Create RoundTrip</a></li>
+                    <li><a href="#">RoundTrip Analysis</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-plus"></i> CrewLink<span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+
+                    <li><a href="#">List All CrewLink</a></li>
+                    <li><a href="#">Create CrewLink</a></li>
+                    <li><a href="#">CrewLink Summary Stations</a></li>
+
+                </ul>
+            </li>
+
+
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-plus"></i> Pilot<span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Create Pilot</a></li>
+                    <li><a href="#">Pilot Type </a></li>
+                    <li><a href="#">List of Pilot</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-plus"></i> Search<span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Find Items</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-plus"></i> Imporvement Suggestions<span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Improve Driving Section</a></li>
+                    <li><a href="#">Improve Long Driving Duty</a></li>
+                    <li><a href="#">Improve  Driving Duty With Daily Pilots</a></li>
+                    <li><a href="#">Improve  RoundTrip With Excess OSR</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4 class="page-header">CREWLINK: DECISION SUPPORT SYSTEM</h4>
+                    <p>
+                        Decision Support System to Make Crew Links Making crew links in any railway system is a complex mathematical problem. Manually
+                        making new crew links for 200 crews takes at least 15 days. Changing an existing link to accommodate
+                        new trains also takes a lot of time. Optimization of crew links is a complex task even with software
+                        and attempting it manually is impossible. We have solved this mathematically complex problem and
+                        made a software for it. This software is uploaded on the cloud. It can be used from anywhere with
+                        an internet connection. It is ready for use and it is available for subscription. If you want to
+                        know more, please call Dr. Manish Kumar at +91-9481578871. CREW BENEFITS OF BETTER LINKS Increase
+                        in mileage Elimination of excess running room rest Timely periodic rest More time at home leading
+                        to happy work-life balance. FREQUENCY of CHANGES in CREW LINKS Crew links are changed for obvious
+                        reasons such as introduction of new trains, increase in frequency of existing trains, and changes
+                        in train timings. Many other operational changes also require new crew links. Some of them are: change
+                        of traction from diesel to electric; change of conventional passenger rakes to MEMU or DMU. These
+                        incremental changes also need new crew links. FEATURES OF THE DECISION SUPPORT SYSTEM It is a web
+                        based system hosted on cloud which ensures high reliability and easy accessibility. This can be used
+                        to make crew links of daily and weekly, long distance mail express and short distance passenger trains.
+                        A train journey is divided into driving sections of suitable length. The small driving sections can
+                        be clubbed to make a long crew duty. Pilot running or dead heading of crew is accommodated in crew
+                        duty. Efficient round trips are made for all the duties. The round trips are arranged in proper sequence
+                        to make crew links, satisfying headquarter rest and periodic rest requirements. Flexibility is the
+                        most important feature of the software and railways can make the crew links as per their choice and
+                        it is not dictated by the software. Crew links for daily trains and crew links for weekly trains
+                        can be clubbed which leads to additional saving. SUBSCRIPTION TO USE THE SOFTWARE The customers can
+                        subscribe to the software. Customers will receive training in the use of the software. We provide
+                        five day working hours (9AM to 5 PM) support for the software. This is just a telephone call away.
+                        Five days are Monday to Friday excluding Karnataka holidays. To know more about the subscription
+                        services please call Dr. Manish Kumar at 9481578871
+
+                    </p>
+
+                    <router-outlet></router-outlet>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+    <app-footer></app-footer>
+</div>
+<!-- /#wrapper -->

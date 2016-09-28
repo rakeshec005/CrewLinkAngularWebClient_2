@@ -1,0 +1,30 @@
+body,
+html {
+  background-color: #fff;
+}
+body h1,
+body h2,
+body h3,
+body h4 {
+  color: black;
+}
+body p,
+body blockquote {
+  color:  black;
+}
+body a {
+  color:#fff;
+  text-decoration: underline;
+}
+body a:hover {
+  color:black;
+}
+body {
+  position: relative;
+  overflow-x: hidden;
+}
+body,
+html {
+  height: 100%;
+  background-color: #fff;
+}
