@@ -17,17 +17,17 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let salary of salaryList">
-            <td></td>
+        <tr *ngFor="let salary of salaryList;let index = index">
+            <td>{{index+1}}</td>
             <td>{{salary.employeeId}}</td>
             <td>{{salary.employeeName}}</td>
             <td>{{salary.salary}}</td>
             <td>{{salary.designation}}</td>
-            <td>{{salary.depositedOn}}</td>
+            <td>{{salary.depositedOn | date}}</td>
             <td></td>
             <td></td>
             <td></td>
-            <td>Action</td>
+            <td></td>
             
             <td>
                 <button type="button" class="btn btn-danger btn-xs" (click) = "removeUser(user)" >
