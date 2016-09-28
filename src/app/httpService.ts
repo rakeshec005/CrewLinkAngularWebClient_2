@@ -9,7 +9,7 @@ export class HttpService {
 
     getSalary(){
         return this._http.get("http://localhost:4000/api/v1/salary").
-        map(res=>res.json());
+        map( res=>res.json());
     }
 }
 

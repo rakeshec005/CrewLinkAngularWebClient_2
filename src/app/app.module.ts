@@ -11,6 +11,8 @@ import { aboutComponent } from '../app/about/about.component';
 import { HomeComponent } from '../app/home/home.component';
 import { headerComponent} from '../app/header/header.component';
 import { footerComponent} from '../app/footer/footer.component';
+import {HttpService} from './httpService';
+
 
 @NgModule({
   declarations: [
@@ -29,7 +31,7 @@ import { footerComponent} from '../app/footer/footer.component';
     CommonModule,
     RouterModule.forRoot(APP_ROUTER_PROVIDERS)
   ],
-  providers: [],
+  providers: [HttpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
