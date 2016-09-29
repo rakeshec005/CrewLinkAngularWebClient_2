@@ -19,6 +19,7 @@ export class HomeComponent implements OnInit {
   private totalPages: number;
   private totalRecords: number;
   private toasterService: ToasterService;
+  
 
   constructor(toasterService: ToasterService, private _httpservice: HttpService) {
     this.toasterService = toasterService;
