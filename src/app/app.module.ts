@@ -20,6 +20,7 @@ import { headerComponent} from '../app/header/header.component';
 import { footerComponent} from '../app/footer/footer.component';
 import { userRoleComponent } from '../app/userRole/userRole.component';
 import { userComponent } from '../app/user/user.component';
+import { dashboardComponent } from '../app/dashboard/dashboard.component';
 
 
 
@@ -31,7 +32,8 @@ import { userComponent } from '../app/user/user.component';
     headerComponent,
     footerComponent,
     userRoleComponent,
-    userComponent
+    userComponent,
+    dashboardComponent
   ],
   imports: [
     ToasterModule,
