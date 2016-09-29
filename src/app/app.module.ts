@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from "@angular/router";
 import { HttpModule } from '@angular/http';
+import { JsonpModule } from '@angular/http';
+ 
 import { CommonModule } from '@angular/common';
 import { APP_ROUTER_PROVIDERS } from './routes';
 
@@ -16,7 +18,7 @@ import { aboutComponent } from '../app/about/about.component';
 import { HomeComponent } from '../app/home/home.component';
 import { headerComponent} from '../app/header/header.component';
 import { footerComponent} from '../app/footer/footer.component';
-import { roleComponent } from '../app/role/role.component';
+import { userRoleComponent } from '../app/userRole/userRole.component';
 import { userComponent } from '../app/user/user.component';
 
 
@@ -28,7 +30,7 @@ import { userComponent } from '../app/user/user.component';
     HomeComponent,
     headerComponent,
     footerComponent,
-    roleComponent,
+    userRoleComponent,
     userComponent
   ],
   imports: [
@@ -37,6 +39,7 @@ import { userComponent } from '../app/user/user.component';
     FormsModule,
     HttpModule,
     CommonModule,
+    JsonpModule,
     RouterModule.forRoot(APP_ROUTER_PROVIDERS)
   ],
   providers: [HttpService],

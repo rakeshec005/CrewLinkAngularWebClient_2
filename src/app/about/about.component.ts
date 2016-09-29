@@ -1,5 +1,5 @@
 'use strict';
-import { Component} from '@angular/core';
+import { Component,OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-about',
@@ -8,7 +8,11 @@ import { Component} from '@angular/core';
 
 })
 export class aboutComponent {
-  
+    constructor(){}
+
+    ngOnInit(){
+      
+    }
    
   
 }

@@ -16,14 +16,14 @@
             <li>
                 <a [routerLink]="['/about']"><i class="fa fa-fw fa-folder"></i>About</a>
             </li>
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user fa-fw" aria-hidden="true"></i>User<span class="caret"></span></a>
-                <ul class="dropdown-menu" role="menu">
-                    <li><a [routerLink]="['/user']"><i class="fa fa-adjust fa-fw" aria-hidden="true"></i>User</a></li>
-                    <li><a [routerLink]="['/role']"><i class="fa fa-adjust fa-fw" aria-hidden="true"></i>Role</a></li>
 
-                </ul>
+            <li>
+                <a [routerLink]="['/user']"><i class="fa fa-camera fa-fw"></i>User</a>
             </li>
+            <li>
+                <a [routerLink]="['/userRole']"><i class="fa fa-university fa-fw"></i>Role</a>
+            </li>
+
             <li>
                 <a href="#"><i class="fa fa-fw fa-file-o"></i>CrewType</a>
             </li>
@@ -102,7 +102,7 @@
                 </ul>
             </li>
             <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-plus"></i> Imporvement Suggestions<span class="caret"></span></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-plus"></i> Improv Suggestions<span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
                     <li><a href="#">Improve Driving Section</a></li>
                     <li><a href="#">Improve Long Driving Duty</a></li>
@@ -118,9 +118,9 @@
     <div id="page-content-wrapper">
 
         <div class="container">
-           
-                    <h4>CREWLINK: DECISION SUPPORT SYSTEM</h4>
-                   <!-- <p>
+
+            <h5>CREWLINK: DECISION SUPPORT SYSTEM</h5>
+            <!-- <p>
                         Decision Support System to Make Crew Links Making crew links in any railway system is a complex mathematical problem. Manually
                         making new crew links for 200 crews takes at least 15 days. Changing an existing link to accommodate
                         new trains also takes a lot of time. Optimization of crew links is a complex task even with software
@@ -151,9 +151,9 @@
                     </p>
                     !-->
 
-                    <router-outlet></router-outlet>
+            <router-outlet></router-outlet>
 
-             
+
         </div>
     </div>
     <!-- /#page-content-wrapper -->
