@@ -16,8 +16,13 @@
             <li>
                 <a [routerLink]="['/about']"><i class="fa fa-fw fa-folder"></i>About</a>
             </li>
-            <li>
-                <a href="#"><i class="fa fa-fw fa-file-o"></i>Users</a>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user fa-fw" aria-hidden="true"></i>User<span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a [routerLink]="['/user']"><i class="fa fa-adjust fa-fw" aria-hidden="true"></i>User</a></li>
+                    <li><a [routerLink]="['/role']"><i class="fa fa-adjust fa-fw" aria-hidden="true"></i>Role</a></li>
+
+                </ul>
             </li>
             <li>
                 <a href="#"><i class="fa fa-fw fa-file-o"></i>CrewType</a>
@@ -113,10 +118,9 @@
     <div id="page-content-wrapper">
 
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h4 class="page-header">CREWLINK: DECISION SUPPORT SYSTEM</h4>
-                    <p>
+           
+                    <h4>CREWLINK: DECISION SUPPORT SYSTEM</h4>
+                   <!-- <p>
                         Decision Support System to Make Crew Links Making crew links in any railway system is a complex mathematical problem. Manually
                         making new crew links for 200 crews takes at least 15 days. Changing an existing link to accommodate
                         new trains also takes a lot of time. Optimization of crew links is a complex task even with software
@@ -145,14 +149,14 @@
                         services please call Dr. Manish Kumar at 9481578871
 
                     </p>
+                    !-->
 
                     <router-outlet></router-outlet>
 
-                </div>
-            </div>
+             
         </div>
     </div>
     <!-- /#page-content-wrapper -->
-    <app-footer></app-footer>
+    <!---<app-footer></app-footer> !-->
 </div>
 <!-- /#wrapper -->
