@@ -11,6 +11,7 @@ import { APP_ROUTER_PROVIDERS } from './routes';
 /* ALL SERVICE DECLARATION  */
 import {ToasterModule, ToasterService} from 'angular2-toaster/angular2-toaster';
 import {salaryService} from './services/salaryService';
+import {roleService} from './services/roleService';
 
 
 
@@ -54,7 +55,8 @@ import { loginComponent } from '../app/login/login.component';
     RouterModule.forRoot(APP_ROUTER_PROVIDERS)
   ],
   providers: [
-    salaryService
+    salaryService,
+    roleService
   ],
   bootstrap: [AppComponent]
 })
