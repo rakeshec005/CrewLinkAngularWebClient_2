@@ -1,5 +1,6 @@
 'use strict';
 import { Component} from '@angular/core';
+import {userModel} from '../models/userModel';
 
 @Component({
   selector: 'app-user',
@@ -8,13 +9,14 @@ import { Component} from '@angular/core';
 
 })
 export class userComponent {
-  userdetails : Object = {};
+   usermodel = new userModel("","","","","",""); 
+  
   constructor() {
 
   }
 
-  saveUser(){
-    console.log(""+this.userdetails);
+  saveUser() {
+    console.log("" + this.usermodel.username);
 
   }
 

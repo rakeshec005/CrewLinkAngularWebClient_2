@@ -6,6 +6,7 @@
         <div class="panel panel-default">
             <div class="panel-heading">Create Role</div>
             <div class="panel-body">
+                <div class="col-lg-6">
                 <form #f="ngForm">
                     <div class="form-group">
                         <label>Role Name:</label>
@@ -14,6 +15,7 @@
                     </div>
                     <button type="button" class="btn btn-primary" (click)=saveRole(f.value)>save</button>
                 </form>
+                </div>
             </div>
         </div>
     </div>
