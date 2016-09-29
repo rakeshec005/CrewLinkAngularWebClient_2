@@ -1,47 +1,59 @@
-<h3>Home Page </h3>
+<div class="page-header">
+    <h1>Home</h1>
+</div>
 
-<table class="table table-striped table-hover table-condensed">
-    <thead>
-        <tr>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">Salary</div>
+            <div class="panel-body">
+                <table class="table table-striped table-hover table-condensed">
+                    <thead>
+                        <tr>
+                            <th>Sl.No</th>
+                            <th>EMPID</th>
+                            <th>EmployeeName</th>
+                            <th>Amount</th>
+                            <th>Destination</th>
+                            <th>Deposited</th>
+                            <th>RoleCode</th>
+                            <th>MobileNo</th>
+                            <th>Address</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let salary of salaryList;let index = index">
+                            <td>{{index+1}}</td>
+                            <td>{{salary.employeeId}}</td>
+                            <td>{{salary.employeeName}}</td>
+                            <td>{{salary.salary}}</td>
+                            <td>{{salary.designation}}</td>
+                            <td>{{salary.depositedOn | date}}</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
 
-            <th>Sl.No</th> 
-            <th>EMPID</th>
-            <th>EmployeeName</th>
-            <th>Amount</th>
-            <th>Destination</th>
-            <th>Deposited</th>
-            <th>RoleCode</th>
-            <th>MobileNo</th>
-            <th>Address</th>
-            <th>Action</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let salary of salaryList;let index = index">
-            <td>{{index+1}}</td>
-            <td>{{salary.employeeId}}</td>
-            <td>{{salary.employeeName}}</td>
-            <td>{{salary.salary}}</td>
-            <td>{{salary.designation}}</td>
-            <td>{{salary.depositedOn | date}}</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            
-            <td>
-                <button type="button" class="btn btn-danger btn-xs" (click) = "removeUser(user)" >
+                            <td>
+                                <button type="button" class="btn btn-danger btn-xs" (click)="removeUser(user)">
                     <i class="fa fa-trash" aria-hidden="true"></i>
                 </button>
-                 <button type="button" class="btn btn-warning btn-xs">
+                                <button type="button" class="btn btn-warning btn-xs">
                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                 </button>
-            </td>
+                            </td>
 
-        </tr>
+                        </tr>
 
-    </tbody>
-</table>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+</div>
+
 
 
 <toaster-container></toaster-container>
