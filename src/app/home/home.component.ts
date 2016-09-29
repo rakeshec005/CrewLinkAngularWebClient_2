@@ -11,12 +11,16 @@ import {HttpService} from '../httpService';
 
 })
 export class HomeComponent implements OnInit {
-  
+
   // variable declaration
   private salaryList: any;
+  private currentPage: number;
+  private perPage: number;
+  private totalPages: number;
+  private totalRecords: number;
   private toasterService: ToasterService;
-  
-  constructor(toasterService: ToasterService,private _httpservice: HttpService) {
+
+  constructor(toasterService: ToasterService, private _httpservice: HttpService) {
     this.toasterService = toasterService;
 
   }
@@ -28,7 +32,13 @@ export class HomeComponent implements OnInit {
 
   getSalaryDetails() {
     this._httpservice.getSalary().subscribe(
-      data => this.salaryList = data.results,
+      data => {
+        this.salaryList = data.results,
+          this.currentPage = data.current,
+          this.perPage = data.options.perPage,
+          this.totalPages = data.last,
+          this.totalRecords = data.count
+      },
       error => alert(error),
       () => console.log("Finish")
     );
