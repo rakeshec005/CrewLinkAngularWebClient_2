@@ -1,5 +1,6 @@
 'use strict';
 import { Component} from '@angular/core';
+import { headerNotificationComponent } from '../../app/header-notification/headerNotification.component';
 
 @Component({
   selector: 'header',

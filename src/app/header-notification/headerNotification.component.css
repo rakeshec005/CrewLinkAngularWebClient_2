@@ -1,0 +1,12 @@
+.rightSideBar{
+    margin-right: 78px;
+    color:dodgerblue;
+    background-color: gainsboro!important;
+    text-decoration: none;
+}
+a:link, a:visited {   
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}

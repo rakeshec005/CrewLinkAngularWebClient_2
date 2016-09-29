@@ -21,6 +21,8 @@ import { footerComponent} from '../app/footer/footer.component';
 import { userRoleComponent } from '../app/userRole/userRole.component';
 import { userComponent } from '../app/user/user.component';
 import { dashboardComponent } from '../app/dashboard/dashboard.component';
+import { headerNotificationComponent } from '../app/header-notification/headerNotification.component';
+
 
 
 
@@ -33,7 +35,8 @@ import { dashboardComponent } from '../app/dashboard/dashboard.component';
     footerComponent,
     userRoleComponent,
     userComponent,
-    dashboardComponent
+    dashboardComponent,
+    headerNotificationComponent
   ],
   imports: [
     ToasterModule,
