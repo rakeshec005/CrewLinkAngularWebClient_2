@@ -12,6 +12,7 @@ import { APP_ROUTER_PROVIDERS } from './routes';
 import {ToasterModule, ToasterService} from 'angular2-toaster/angular2-toaster';
 import {salaryService} from './services/salaryService';
 import {roleService} from './services/roleService';
+import {userService} from './services/userService';
 
 
 
@@ -59,7 +60,8 @@ import { createRoleComponent } from '../app/userRole/createRole/createRole.compo
   ],
   providers: [
     salaryService,
-    roleService
+    roleService,
+    userService
   ],
   bootstrap: [AppComponent]
 })

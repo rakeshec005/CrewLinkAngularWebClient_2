@@ -1,22 +1,50 @@
 'use strict';
-import { Component} from '@angular/core';
+import { Component, OnInit, OnDestroy} from '@angular/core';
 import {userModel} from '../models/userModel';
+import {userService} from '../services/userService';
+import {roleService} from '../services/roleService';
 
 @Component({
   selector: 'app-user',
   templateUrl: "user.component.html",
-  styleUrls: ['user.component.css']
+  styleUrls: ['user.component.css'],
+  providers: [roleService, userService],
 
 })
-export class userComponent {
-   usermodel = new userModel("","","","","",""); 
+export class userComponent implements OnInit {
+
+  // variable declaration
+  private usermodel;
+  private rolesList: any;
   
-  constructor() {
+  constructor(private _http: userService, private _roleHttp:roleService) {
+  this.usermodel = new userModel("", "", "", "", "", "", "");
+  }
+  ngOnInit() {
+  this.getRoles();
+  }
+  ngOnDestroy() {
 
   }
 
+  getRoles() {
+    this._roleHttp.getRoles().subscribe(
+      data => {
+        this.rolesList = data.results     
+      },
+      error => alert(error),
+      () => console.log("Roles data FetChing completed")
+    );
+
+  }
+
+  onChange($event, deviceValue) {
+    console.log(deviceValue);
+}
+
   saveUser() {
     console.log("" + this.usermodel.username);
+    this._http.createUser(this.usermodel);
 
   }
 

@@ -44,6 +44,12 @@
                 <div class="col-lg-6">
 
                     <div class="form-group">
+                        <select [(ngModel)]="usermodel.roleCode" name="roleCode" class="form-control"  #device (change)="onChange($event, device.value)">
+                                <option *ngFor="let r of rolesList">{{r.roleCode}}</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
                         <label class="control-label">Mob No.</label> <input type="text" placeholder='Mobile Number' class="form-control"
                             [(ngModel)]="usermodel.mobileNo" name="mnumber">
                     </div>
