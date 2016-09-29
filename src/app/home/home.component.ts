@@ -1,13 +1,13 @@
 'use strict';
 import { Component, OnInit} from '@angular/core';
 import {ToasterModule, ToasterService} from 'angular2-toaster/angular2-toaster';
-import {HttpService} from '../httpService';
+import {salaryService} from '../services/salaryService';
 
 @Component({
   selector: 'app-home',
   templateUrl: "home.component.html",
   styleUrls: ['home.component.css'],
-  providers: [HttpService]
+  providers: [salaryService]
 
 })
 export class HomeComponent implements OnInit {
@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit {
   private toasterService: ToasterService;
   
 
-  constructor(toasterService: ToasterService, private _httpservice: HttpService) {
+  constructor(toasterService: ToasterService, private _httpservice: salaryService) {
     this.toasterService = toasterService;
 
   }

@@ -10,7 +10,11 @@ import { APP_ROUTER_PROVIDERS } from './routes';
 
 /* ALL SERVICE DECLARATION  */
 import {ToasterModule, ToasterService} from 'angular2-toaster/angular2-toaster';
-import {HttpService} from './httpService';
+import {salaryService} from './services/salaryService';
+
+
+
+
 
 /* ALL COMPONENT DECLARATION  */
 import { AppComponent } from './app.component';
@@ -49,7 +53,9 @@ import { loginComponent } from '../app/login/login.component';
     JsonpModule,
     RouterModule.forRoot(APP_ROUTER_PROVIDERS)
   ],
-  providers: [HttpService],
+  providers: [
+    salaryService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
