@@ -1,8 +1,7 @@
 'use strict';
 import { Component, OnInit, Input, OnDestroy} from '@angular/core';
-//import {Role} from '../models/Role';
-//import {FORM_DIRECTIVES } from '@angular/common';
 import {roleService} from '../services/roleService';
+import { createRoleComponent } from '../../app/userRole/createRole/createRole.component';
 
 
 
@@ -10,14 +9,15 @@ import {roleService} from '../services/roleService';
   selector: 'app-userrole',
   templateUrl: "userRole.component.html",
   styleUrls: ['userRole.component.css'],
-  providers:[roleService]
+  providers:[roleService],
+  
 
 
 })
 export class userRoleComponent implements OnInit {
 
-  // roleModel = new Role("akshay");
-  private roleList: any;
+  
+  private rolesList: any;
   private currentPage: number;
   private perPage: number;
   private totalPages: number;
@@ -32,10 +32,16 @@ export class userRoleComponent implements OnInit {
 
   }
 
+  
+  ngOnInit() {
+    console.log("Inside Oninit of Role");
+    this.getRoles();
+  }
+  ngOnDestroy() { }
   getRoles(){
      this._http.getRoles().subscribe(
       data => {
-        this.roleList = data.results,
+        this.rolesList = data.results,
           this.currentPage = data.current,
           this.perPage = data.options.perPage,
           this.totalPages = data.last,
@@ -47,17 +53,8 @@ export class userRoleComponent implements OnInit {
 
   }
 
-  ngOnInit() {
-    console.log("Inside Oninit of Role");
-    this.getRoles();
-  }
-  ngOnDestroy() { }
 
-   saveRole(form: any): void {  
-    console.log('you submitted value:', form);  
-  }
 
- 
 
 
 }

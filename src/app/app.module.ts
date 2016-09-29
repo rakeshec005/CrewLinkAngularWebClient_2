@@ -28,6 +28,8 @@ import { userComponent } from '../app/user/user.component';
 import { dashboardComponent } from '../app/dashboard/dashboard.component';
 import { headerNotificationComponent } from '../app/header-notification/headerNotification.component';
 import { loginComponent } from '../app/login/login.component';
+import { createRoleComponent } from '../app/userRole/createRole/createRole.component';
+
 
 
 
@@ -43,7 +45,8 @@ import { loginComponent } from '../app/login/login.component';
     userComponent,
     dashboardComponent,
     headerNotificationComponent,
-    loginComponent
+    loginComponent,
+    createRoleComponent
   ],
   imports: [
     ToasterModule,
