@@ -14,16 +14,20 @@ import {ToasterModule, ToasterService} from 'angular2-toaster/angular2-toaster';
 export class listUserComponent implements OnInit {
 
   // variable declaration
-  
+
   private usersList: any;
-  private errorString:string;
+  private errorString: string;
   private toasterService: ToasterService;
-  
-  constructor(toasterService: ToasterService,private _http: userService) {
-   this.toasterService = toasterService;
+  private currentPage: number;
+  private perPage: number;
+  private totalPages: number;
+  private totalRecords: number;
+
+  constructor(toasterService: ToasterService, private _http: userService) {
+    this.toasterService = toasterService;
   }
   ngOnInit() {
-  this.getUsers();
+    this.getUsers();
   }
   ngOnDestroy() {
 
@@ -32,7 +36,11 @@ export class listUserComponent implements OnInit {
   getUsers() {
     this._http.getUsers().subscribe(
       data => {
-        this.usersList = data.results     
+        this.usersList = data.results,
+          this.currentPage = data.current,
+          this.perPage = data.options.perPage,
+          this.totalPages = data.last,
+          this.totalRecords = data.count
       },
       error => alert(error),
       () => console.log("Roles data FetChing completed")
@@ -40,7 +48,7 @@ export class listUserComponent implements OnInit {
 
   }
 
-  removeUser(user){
+  removeUser(user) {
     this.usersList.splice(this.usersList.indexOf(user), 1);
     this.toasterService.pop('success', 'User deleted Successfully!!!!', 'User deleted Successfully!!!!!!');
 
