@@ -1,5 +1,5 @@
 export class userModel {
-    username: string;
+    userName: string;
     password: string;
     firstName: string;
     lastname: string;
@@ -8,8 +8,9 @@ export class userModel {
     roleCode:string;
     address:string;
     city:string;
+    userActive:boolean;
     constructor(
-        username: string,
+        userName: string,
         password: string,
         firstName: string,
         lastname: string,
@@ -17,9 +18,10 @@ export class userModel {
         mobileNo: string,
         roleCode:string,
         address:string,
-        city:string
+        city:string,
+        userActive:boolean
     ) {
-        this.username = username;
+        this.userName = userName;
         this.password = password;
         this.firstName = firstName;
         this.lastname = lastname;
@@ -28,6 +30,7 @@ export class userModel {
         this.roleCode = roleCode;
         this.address = address;
         this.city = city;
+        this.userActive = userActive;
 
     }
 
