@@ -43,23 +43,37 @@
                 </div>
                 <div class="col-lg-6">
 
+
                     <div class="form-group">
-                        <select [(ngModel)]="usermodel.roleCode" name="roleCode" class="form-control"  #device (change)="onChange($event, device.value)">
-                                <option *ngFor="let r of rolesList">{{r.roleCode}}</option>
+                        <label class="control-label">Address.</label> <textarea placeholder='Enter Address' cols="15" rows="5"
+                            class="form-control" [(ngModel)]="usermodel.address" name="userAddress"> </textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label">City</label> <input type="text" placeholder='Enter your City' class="form-control"
+                            [(ngModel)]="usermodel.city" name="userCity">
+                    </div>
+
+                    <div class="form-group">
+                        <select [(ngModel)]="usermodel.roleCode" name="roleCode" class="form-control" #device (change)="onChange($event, device.value)">
+                                <option selected disabled>Choose here</option>
+                                <option *ngFor="let r of rolesList" [ngValue]="r.roleCode">{{r.roleCode}}</option>
                         </select>
                     </div>
 
                     <div class="form-group">
-                        <label class="control-label">Mob No.</label> <input type="text" placeholder='Mobile Number' class="form-control"
+                        <label class="control-label">Mobie No.</label> <input type="text" placeholder='Mobile Number' class="form-control"
                             [(ngModel)]="usermodel.mobileNo" name="mnumber">
                     </div>
                 </div>
                 <div class="col-lg-12">
-                    <button type="submit" class="btn btn-primary btn-sm">
+                    <button type="submit" class="btn btn-primary btn-md">
 				<i class="fa fa-floppy-o" aria-hidden="true"></i> Save
 
 				</button>
-                    <input type="button" class="btn btn-danger btn-sm" value="Reset" />
+                    <button type="button" class="btn btn-danger btn-md" value="Reset"> Refresh
+                        <i class="fa fa-refresh fa-fw" aria-hidden="true"></i>
+                    </button>
 
                 </div>
             </form>

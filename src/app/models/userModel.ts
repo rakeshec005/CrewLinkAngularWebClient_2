@@ -6,6 +6,8 @@ export class userModel {
     email: string;
     mobileNo: string;
     roleCode:string;
+    address:string;
+    city:string;
     constructor(
         username: string,
         password: string,
@@ -13,7 +15,9 @@ export class userModel {
         lastname: string,
         email: string,
         mobileNo: string,
-        roleCode:string
+        roleCode:string,
+        address:string,
+        city:string
     ) {
         this.username = username;
         this.password = password;
@@ -22,6 +26,8 @@ export class userModel {
         this.email = email;
         this.mobileNo = mobileNo;
         this.roleCode = roleCode;
+        this.address = address;
+        this.city = city;
 
     }
 
