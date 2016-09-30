@@ -35,6 +35,12 @@ import { createRoleComponent } from '../app/userRole/createRole/createRole.compo
 
 import { listUserComponent } from '../app/user/ListUser/listUser.component';
 
+// UtilityComponent
+
+import {autoCompleteComponent} from './utility/autoComplete.component';
+
+
+
 
 
 
@@ -51,7 +57,8 @@ import { listUserComponent } from '../app/user/ListUser/listUser.component';
     headerNotificationComponent,
     loginComponent,
     createRoleComponent,
-    listUserComponent
+    listUserComponent,
+    autoCompleteComponent
   ],
   imports: [
     ToasterModule,
