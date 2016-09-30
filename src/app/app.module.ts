@@ -31,6 +31,9 @@ import { headerNotificationComponent } from '../app/header-notification/headerNo
 import { loginComponent } from '../app/login/login.component';
 import { createRoleComponent } from '../app/userRole/createRole/createRole.component';
 
+// User
+
+import { listUserComponent } from '../app/user/ListUser/listUser.component';
 
 
 
@@ -47,7 +50,8 @@ import { createRoleComponent } from '../app/userRole/createRole/createRole.compo
     dashboardComponent,
     headerNotificationComponent,
     loginComponent,
-    createRoleComponent
+    createRoleComponent,
+    listUserComponent
   ],
   imports: [
     ToasterModule,

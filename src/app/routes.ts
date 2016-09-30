@@ -7,6 +7,8 @@ import { dashboardComponent } from '../app/dashboard/dashboard.component';
 import { loginComponent } from '../app/login/login.component';
 
 
+
+
 export const APP_ROUTER_PROVIDERS: Routes = [
   { path: 'login', component: loginComponent },
   { path: 'home', component: HomeComponent },
